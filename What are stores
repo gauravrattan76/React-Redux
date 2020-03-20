@@ -1,0 +1,25 @@
+Stores-
+_______________
+
+Redux store stores the entire application state
+getState() method gets the application state
+dispatch method allows to dispatch a action 
+subscribe allows to subscribe to the store
+unsubscribe unsubscribes from the application
+
+
+
+const redux = require('redux');
+const createStore = redux.createStore;
+
+//Creating a store using redux library create store method and pasing the initialk state using reducer
+const store = createStore(reducer);
+//store.getstate method to get the current state
+console.log('initial state',store.getState());
+//subscribing to the store
+const unsubscribe = store.subscribe(() => console.log('new state',store.getState()));
+//dispatching the actions using action creator
+store.dispatch(buyCake());
+store.dispatch(buyCake());
+store.dispatch(buyCake());
+unsubscribe();
