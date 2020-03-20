@@ -4,12 +4,15 @@ const combineReducers = redux.combineReducers;
 
 //Action iS a plain javsacripot object with type property and we use const to m ake sure that there are no type rrrors
 
+//Declaring the types for each action
 const BUY_CAKE = 'Buy_Cake';
 const BUY_ICECREAM ='Buy_IceCream';
 
 
 //Action Creator is a function whos task is to return a action
 
+
+//Action Crestor for Cake
 function buyCake(){
     return {
         type:BUY_CAKE,
@@ -17,6 +20,7 @@ function buyCake(){
     }
 }
 
+//Action creator for Ice Cream
 function buyIceCream(){
     return{
         type:BUY_ICECREAM
@@ -30,10 +34,13 @@ function buyIceCream(){
 //     numOfIceCream:7
 // }
 
+
+//state for Cake
 const initialCakeState = {
     numOfCakes:10
 }
 
+//state for Ice cream
 const initialIceCreamState = {
     numOfIceCream:7
 }
@@ -55,6 +62,8 @@ const initialIceCreamState = {
 //     }
 
 // }
+
+//reducer for cake
 const cakeReducer = (state= initialCakeState,action) => {
     switch(action.type){
         case BUY_CAKE : return {
@@ -64,6 +73,8 @@ const cakeReducer = (state= initialCakeState,action) => {
         default: return state
     }
 }
+
+//reducer for Ice cream
 const icecreamReducer = (state= initialIceCreamState,action) => {
     switch(action.type){
         case BUY_ICECREAM : return {
@@ -74,6 +85,8 @@ const icecreamReducer = (state= initialIceCreamState,action) => {
     }
 
 }
+
+//creating a root reducer
 const rootReducer = combineReducers({
     cake:cakeReducer,
     iceCream:icecreamReducer
