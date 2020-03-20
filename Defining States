@@ -1,0 +1,6 @@
+
+//application state needs to be  a single object
+
+const initialState = {
+    numOdCakes:10
+}
