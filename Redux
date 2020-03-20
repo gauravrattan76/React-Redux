@@ -1,0 +1,55 @@
+Redux is for javascript apps
+
+Redux is a predictable state conatiner for javascript apps
+
+It can be used for angular react and vue
+
+Redux is a library for javascript apps
+
+Redux will store and manage the application state
+
+______________________
+
+Redux is a state container
+
+it stores the state of the application
+
+
+__________________________
+
+login component
+
+state is  for a login component-
+
+username 
+password
+submitting
+
+so state includes the data and the ui logic
+_________________________
+
+
+Advantage-
+
+Redux is predictable
+
+Redux is state container
+
+state can change in application
+ex. to do list item can go from pending to complete
+
+
+___________________________
+
+In reduxn the state in oresent in a separate container and we need to interact with it to change the state.
+
+
+_____________________
+
+React is a library used to build user interfaces
+
+redux is a loibray formpredictable state management in javascript apps
+
+react redux is a library that provides binding to use react and redux together
+
+

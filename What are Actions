@@ -1,0 +1,13 @@
+//Action iS a plain javsacripot object with type property and we use const to make sure that there are no type rrrors
+
+const BUY_CAKE = 'Buy_Cake'
+
+
+//Action Creator is a function whos task is to return a action
+
+function buyCake(){
+    return {
+        type:BUY_CAKE,
+        info:'First Action created!!'
+    }
+}

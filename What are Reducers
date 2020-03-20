@@ -1,0 +1,17 @@
+Reducers-
+__________________________
+
+Reducers are functions that take two parameters initial state and action and return the new state.
+
+
+/reducer is a function that takes the current state and action and return the new state
+const reducer = (state= initialState,action) => {
+    switch(action.type){
+        case BUY_CAKE : return {
+            ...state,
+            numOfCakes : state.numOfCakes -1
+        }
+        default: return state
+    }
+
+}
