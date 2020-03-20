@@ -1,6 +1,9 @@
 const redux = require('redux');
+const reduxLogger =require('redux-logger');
 const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
+const applyMiddleware = redux.applyMiddleware;
+const logger = reduxLogger.createLogger();
 
 //Action iS a plain javsacripot object with type property and we use const to m ake sure that there are no type rrrors
 
@@ -92,11 +95,11 @@ const rootReducer = combineReducers({
     iceCream:icecreamReducer
 })
 //Creating a store using redux library create store method and pasing the initialk state using reducer
-const store = createStore(rootReducer);
+const store = createStore(rootReducer,applyMiddleware(logger));
 //store.getstate method to get the current state
 console.log('initial state',store.getState());
 //subscribing to the store
-const unsubscribe = store.subscribe(() => console.log('new state',store.getState()));
+const unsubscribe = store.subscribe(() => {});
 //dispatching the actions using action creator
 store.dispatch(buyCake());
 store.dispatch(buyCake());
